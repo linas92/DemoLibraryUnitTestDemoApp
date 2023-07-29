@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Red, Green, Refactor
+
 namespace DemoLibraryUnitTestDemoApp
 {
     public class DisplayMessages
@@ -12,18 +14,26 @@ namespace DemoLibraryUnitTestDemoApp
         {
             string output = "";
 
-            if (hourOfTheDay < 12)
+            if (hourOfTheDay < 5)
+            {
+                output = $"Go to bed {firstName}";
+            }
+
+            else if (hourOfTheDay < 12)
             {
                 output = $"Good morning {firstName}";
             }
+
             else if (hourOfTheDay < 18)
             {
-                output = $"Good afternoob {firstName}";
+                output = $"Good afternoon {firstName}";
             }
+
             else 
             {
-                output = $"Good afternoob {firstName}";
+                output = $"Good evening {firstName}";
             }
+
             return output;
         }
     }
